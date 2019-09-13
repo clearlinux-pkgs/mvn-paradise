@@ -4,11 +4,13 @@
 #
 Name     : mvn-paradise
 Version  : 2.1.0.2.11.11
-Release  : 1
+Release  : 2
 URL      : https://github.com/scalamacros/paradise/archive/v2.1.0_2.11.11.tar.gz
 Source0  : https://github.com/scalamacros/paradise/archive/v2.1.0_2.11.11.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/scalamacros/paradise_2.11.12/2.1.0/paradise_2.11.12-2.1.0.jar
 Source2  : https://repo.maven.apache.org/maven2/org/scalamacros/paradise_2.11.12/2.1.0/paradise_2.11.12-2.1.0.pom
+Source3  : https://repo1.maven.org/maven2/org/scalamacros/paradise_2.12.7/2.1.0/paradise_2.12.7-2.1.0.jar
+Source4  : https://repo1.maven.org/maven2/org/scalamacros/paradise_2.12.7/2.1.0/paradise_2.12.7-2.1.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -49,6 +51,12 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradis
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradise_2.11.12/2.1.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradise_2.11.12/2.1.0/paradise_2.11.12-2.1.0.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradise_2.12.7/2.1.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradise_2.12.7/2.1.0/paradise_2.12.7-2.1.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradise_2.12.7/2.1.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradise_2.12.7/2.1.0/paradise_2.12.7-2.1.0.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -57,6 +65,8 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/scalamacros/paradis
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/scalamacros/paradise_2.11.12/2.1.0/paradise_2.11.12-2.1.0.jar
 /usr/share/java/.m2/repository/org/scalamacros/paradise_2.11.12/2.1.0/paradise_2.11.12-2.1.0.pom
+/usr/share/java/.m2/repository/org/scalamacros/paradise_2.12.7/2.1.0/paradise_2.12.7-2.1.0.jar
+/usr/share/java/.m2/repository/org/scalamacros/paradise_2.12.7/2.1.0/paradise_2.12.7-2.1.0.pom
 
 %files license
 %defattr(0644,root,root,0755)
